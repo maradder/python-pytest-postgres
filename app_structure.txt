@@ -1,0 +1,14 @@
+.
+├── ./app_structure.txt
+├── ./database.py
+├── ./db_data  [error opening dir]
+├── ./db-setup-files
+|   └── ./db-setup-files/.db.env
+├── ./docker-compose.yml
+├── ./main.py
+├── ./models.py
+├── ./pytest.ini
+├── ./README.md
+├── ./requirements.txt
+└── ./tests
+    └── ./tests/test_main.py

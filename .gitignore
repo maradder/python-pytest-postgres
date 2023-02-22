@@ -1,0 +1,15 @@
+# Cache Files
+*.cache
+__pycache__
+.pytest_cache
+
+# Environmental Variables
+.env
+.**.env
+
+# Database Volume
+db_data
+
+# Virtual environments
+venv
+.venv
