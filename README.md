@@ -62,13 +62,27 @@ After running `docker-compose up`, you can connect to the database with pgAdmin 
 
 ### Create database tables
 
-This demo used a single database table `'items'`.  The SQL command to create the table is:
+This demo used a single database table `'items'`.  Using the alembic cli tool from project's root directory:
+
+```bash
+# This command will process the migration files found in ./migration/versions/
+alembic upgrade head
+```
+
+The sqlalchemy functions within the `upgrade` function in alembic version files will perform the equivalent of the following SQL query:
 
 ```sql
+DROP TABLE IF EXISTS items;
+
 CREATE TABLE items (
     id SERIAL,
     item_name TEXT NOT NULL
 );
+
+INSERT INTO items (
+  item_name
+  )
+  VALUES (?);
 ```
 
 ## Run tests

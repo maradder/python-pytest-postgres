@@ -35,12 +35,15 @@ def session():
     yield test_session
 
     # Close the session after the test function has finished
-    return
+    return db.close_session()
 
 
 # Test the get_items function with the test session
-def test_get_items(session):
+def test_get_items_length(session):
     items = get_items(session)
-    assert len(items) == 1
-    assert items[0].item_name == "test item"
+    assert len(items) == 2
+
+def test_get_items_item_name(session):
+    items = get_items(session)
+    assert items[1].item_name == "test item 2"
 

@@ -34,3 +34,7 @@ class Database:
 
     def get_session(self):
         return self.session
+    
+    def close_session(self):
+        self.session.close()
+        self.session = None
